@@ -1,6 +1,8 @@
 # Class for solving some math and string functions
 class Solver
   def factorial(number)
+    raise ArgumentError, 'Negative numbers are not allowed' if number.negative?
+    
     if number <= 1
       1
     else
