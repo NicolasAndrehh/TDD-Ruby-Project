@@ -1,3 +1,4 @@
+require_relative '../solver'
 
 describe Solver do
 
@@ -14,6 +15,14 @@ describe Solver do
 
         it 'returns 1 for 0' do
             expect(@solver.factorial(0)).to eq(1)
+        end
+    end
+
+    describe '#reverse' do
+        it 'returns the reverse of a given string' do
+            expect(@solver.reverse('hello')).to eq('olleh')
+            expect(@solver.reverse('world')).to eq('dlrow')
+            expect(@solver.reverse('')).to eq('')
         end
     end
 end
