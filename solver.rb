@@ -11,7 +11,7 @@ class Solver
     string.reverse
   end
 
-  def fizzbuzz(number)
+  def fizzbuzz(number = 0)
     if number % 3 == 0 && number % 5 == 0
       'FizzBuzz'
     elsif number % 3 == 0
@@ -19,7 +19,7 @@ class Solver
     elsif number % 5 == 0
       'Buzz'
     else
-      number
+      number.to_s
     end
   end
 end
